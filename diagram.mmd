@@ -1,0 +1,12 @@
+%%{init: {"theme": "base"}}%%
+graph TD
+  START((START)) --> load_memory[Load Memory]
+  load_memory --> supervisor[Supervisor / Router]
+  supervisor --> researcher[Researcher]
+  researcher --> router[Router]
+  router -->|need_more| researcher
+  router -->|done| writer[Writer]
+  writer --> save_memory[Save Memory]
+  save_memory --> END((END))
+
+  classDef node fill:#f9f,stroke:#333,stroke-width:1px;

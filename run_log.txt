@@ -1,0 +1,24 @@
+Invoking graph...
+
+[load_memory] checking for memory file...
+[load_memory] no memory found, starting fresh
+[supervisor] initializing task and routing
+[supervisor] topic=LangGraph multi-agent demo
+[researcher] running iteration 0
+[researcher] found: Fact about 'LangGraph multi-agent demo' - item 1
+[router] routing based on decision
+[decision] iterations=1, need_more=True
+[router] conditional edge -> researcher
+[researcher] running iteration 1
+[researcher] found: Fact about 'LangGraph multi-agent demo' - item 2
+[router] routing based on decision
+[decision] iterations=2, need_more=False
+[router] conditional edge -> writer
+[writer] composing draft from research items
+[writer] draft composed
+[save_memory] persisting memory to C:\Users\reema\Downloads\Lab 7\langgraph_demo\memory.json
+[save_memory] memory saved
+
+=== Run complete ===
+Final state:
+ {'topic': 'LangGraph multi-agent demo', 'research': ["Fact about 'LangGraph multi-agent demo' - item 1", "Fact about 'LangGraph multi-agent demo' - item 2"], 'draft': "Summary for topic: LangGraph multi-agent demo\n- Fact about 'LangGraph multi-agent demo' - item 1\n- Fact about 'LangGraph multi-agent demo' - item 2", 'iterations': 2, 'need_more': False}
